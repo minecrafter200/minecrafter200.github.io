@@ -17,7 +17,7 @@
     var descriptor = {
         blocks: [
             // Block type, block name, function name
-            [' ', 'change title to: %s', 'function1', 'titletos']
+            [' ', 'change title to: %s', 'function1', 'titletos'],
         ],
 
         menus: {
