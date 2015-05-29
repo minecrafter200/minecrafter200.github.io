@@ -11,8 +11,8 @@
     ext.function1 = function(number) {
         // Code that gets executed when the block is run
         
-       document.title = number;
-       alert(document.title);
+       document.head.title = number;
+       alert(document.head.title);
     };
 
     // Block and block menu descriptions
