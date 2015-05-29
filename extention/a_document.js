@@ -12,12 +12,17 @@
         // Code that gets executed when the block is run
        $('title').text(number);
     };
+    ext.function2 = function(number) {
+        // Code that gets executed when the block is run
+       $('title').text() = number;
+    };
 
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             // Block type, block name, function name
             [' ', 'change title to: %s', 'function1'],
+            ['h', 'when the title is %s', 'function2']
         ],
 
         menus: {
