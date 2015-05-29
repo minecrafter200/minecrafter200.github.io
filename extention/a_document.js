@@ -10,7 +10,7 @@
 
     ext.function1 = function(number) {
         // Code that gets executed when the block is run
-        document.write(number);
+        number();
     };
 
     // Block and block menu descriptions
