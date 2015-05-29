@@ -8,17 +8,18 @@
         return {status: 2, msg: 'Ready'};
     };
 
-    ext.my_first_block = function() {
+    ext.function1 = function(number) {
         // Code that gets executed when the block is run
+        document.write(number);
     };
 
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             // Block type, block name, function name
-            [' ', '@greenFlag my first block %n', 'Block1'],
+            [' ', '@greenFlag my first block %n','Block1'],
             ['w', '@stop my first block %m.Menu1', 'Block2'],
-            ['r', '@turnRight my first block %s', 'Block3'],
+            [' ', '@turnRight my first block %s', 'function1', "alert()", 'Block3'],
             ['R', '@turnLeft my first block %b', 'Block4'],
             ['h', 'my first block %c', 'Block5'],
         ],
