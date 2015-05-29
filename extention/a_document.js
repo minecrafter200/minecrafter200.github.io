@@ -10,6 +10,7 @@
 
     ext.function1 = function(number) {
         // Code that gets executed when the block is run
+        alert(number);
        document.title.write(number);
     };
 
