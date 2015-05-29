@@ -22,7 +22,7 @@
         blocks: [
             // Block type, block name, function name
             [' ', 'change title to: %s', 'function1'],
-            ['h', 'when the title is %s', 'function2']
+            ['h', 'when the title is %s', 'function2'],
         ],
 
         menus: {
