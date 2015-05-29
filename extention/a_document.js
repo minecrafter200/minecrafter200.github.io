@@ -16,8 +16,16 @@
     var descriptor = {
         blocks: [
             // Block type, block name, function name
-            [' ', 'my first block', 'my_first_block'],
-        ]
+            [' ', '@greenFlag my first block %n', 'Block1'],
+            ['w', '@stop my first block %m.Menu1', 'Block2'],
+            ['r', '@turnRight my first block %s', 'Block3'],
+            ['R', '@turnLeft my first block %b', 'Block4'],
+            ['h', 'my first block %c', 'Block5'],
+        ],
+
+        menus: {
+            Menu1: ["1","3","9","27","81"],
+        }
     };
 
     // Register the extension
