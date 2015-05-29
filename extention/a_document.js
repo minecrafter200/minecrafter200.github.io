@@ -14,7 +14,9 @@
     };
     ext.function2 = function(number) {
         // Code that gets executed when the block is run
+        while (1 == 1) {
        $('title').text() = number;
+        }
     };
 
     // Block and block menu descriptions
