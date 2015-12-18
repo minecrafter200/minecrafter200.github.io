@@ -1,5 +1,5 @@
 var player_s = {}
-player_s.init = function(scene) {
+player_s.init = function(scene, mass) {
 
       var geometry = new THREE.CircleGeometry( 10, 32);
 			var material = new THREE.MeshPhongMaterial( { color: "red" } )
