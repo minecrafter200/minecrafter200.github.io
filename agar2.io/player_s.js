@@ -4,5 +4,6 @@ player_s.init = function(scene) {
       var geometry = new THREE.CircleGeometry( 5, 32);
 			var material = new THREE.MeshPhongMaterial( { map : texture } );
       var circle = new THREE.Mesh( geometry, material );
+      circle.position.z = 0.5
       scene.add(circle)
 }
