@@ -39,11 +39,12 @@
 			var light = new THREE.AmbientLight( ); // soft white light
 			scene.add( light );
 			scene.add( cube );
-
+var mass = 10
 			camera.position.z = 5;
-			camera.zoom = 0.1
+			camera.zoom = (1/mass)*20
 		camera.updateProjectionMatrix();
-			player_s.init(scene)
+		
+			player_s.init(scene, mass)
 			var render = function () {
 				
 				requestAnimationFrame( render );
