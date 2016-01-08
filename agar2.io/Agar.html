@@ -53,7 +53,7 @@ window.onkeyup = function(e) {
 			scene.add( cube );
 	var mass = 10;
 			camera.position.z = 5;
-			camera.zoom = (((mass*2)));
+			camera.zoom = (1/((mass*2)));
 		camera.updateProjectionMatrix();
 		
 			player_s.init(scene, mass)
