@@ -9,3 +9,6 @@ player_s.init = function(scene, mass) {
       circle.position.z = 0.5
       scene.add(circle)
 }
+player_s.visual = function() {
+	
+}
