@@ -1,7 +1,7 @@
 var player_s = {}
 player_s.init = function(scene, mass) {
-      var color = new THREE.color(1,0,0);
-      //Math.random(),Math.random(),Math.random()
+      var color = new THREE.Color(Math.random(),Math.random(),Math.random());
+      
       var geometry = new THREE.CircleGeometry( mass, 32);
 			var material = new THREE.MeshPhongMaterial()
 			material.color = color
