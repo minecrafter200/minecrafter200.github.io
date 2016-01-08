@@ -1,8 +1,8 @@
 var player_s = {}
 player_s.init = function(scene, mass) {
-      console.log(getRandomColor())
+      
       var geometry = new THREE.CircleGeometry( mass, 32);
-			var material = new THREE.MeshPhongMaterial( { color: "red"} )
+			var material = new THREE.MeshPhongMaterial( { color: rgb(Math.rand(),Math.rand(),Math.rand())} )
       var circle = new THREE.Mesh( geometry, material );
       circle.position.z = 0.5
       scene.add(circle)
