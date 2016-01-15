@@ -11,5 +11,5 @@ player_s.init = function(scene, mass) {
       scene.add(circle)
 }
 player_s.visual = function() {
-	circle.translate.y = 50
+	circle.translate.y = 1;
 }
