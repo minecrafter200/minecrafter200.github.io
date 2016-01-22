@@ -2,6 +2,7 @@ var player_s = {}
 var circle
 var camera2
 player_s.init = function(scene, mass, camera) {
+	window.addEventListener( 'mousemove', onMouseMove, false );
       var color = new THREE.Color(Math.random(),Math.random(),Math.random());
       
       var geometry = new THREE.CircleGeometry( ((mass)*10), 64);
@@ -11,6 +12,13 @@ player_s.init = function(scene, mass, camera) {
       circle.position.z = 0.5
       scene.add(circle)
 camera2 = camera;
+}
+function onMouseMove( event ) {
+
+
+	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;		
+console.log(mouse.x + "   " + mouse.y)
 }
 player_s.visual = function() {
 	circle.rotation.z += 0.005 
