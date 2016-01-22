@@ -19,14 +19,14 @@ var mh = 0
 function onMouseMove( event ) {
 
 
-	var mousex = (( event.clientX / (window.innerWidth * 0.8) ) * 2 - 1)*20;
-	var mousey = - (( event.clientY / (window.innerHeight * 0.8) ) * 2 + 1)*20;	
+	var mousex = (( event.clientX / (window.innerWidth * 0.8) ) * 2 );
+	var mousey = - (( event.clientY / (window.innerHeight * 0.8) ) * 2 );	
 	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
 	mh = mouseh
 	mx = mousex
 	
-		theta = (Math.asin(mx/mh))*20
-console.log((theta * (180/Math.Pi)))
+		theta = (Math.asin(mx/mh))
+console.log((theta * (180/Math.PI)))
 	
 
 }
