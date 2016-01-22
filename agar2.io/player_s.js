@@ -13,6 +13,7 @@ player_s.init = function(scene, mass, camera) {
       scene.add(circle)
 camera2 = camera;
 }
+var theta 
 var mx
 var mh
 function onMouseMove( event ) {
@@ -23,9 +24,10 @@ function onMouseMove( event ) {
 	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
 	mh = mouseh
 	mx = mousex
-
+theta = Math.asin(mx/mh)
+console.log(theta)
 	
-console.log(mousex + "   " + mousey + "   " + mouseh)
+
 }
 
 player_s.visual = function() {
