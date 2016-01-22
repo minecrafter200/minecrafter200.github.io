@@ -24,8 +24,9 @@ function onMouseMove( event ) {
 	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
 	mh = mouseh
 	mx = mousex
+	
 		theta = Math.asin(mx/mh)
-
+console.log(theta)
 	
 
 }
