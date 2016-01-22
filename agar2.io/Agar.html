@@ -44,7 +44,7 @@
 			camera.zoom = (1/(((mass*3.16227766)*2)));
 		camera.updateProjectionMatrix();
 		
-			player_s.init(scene, mass)
+			player_s.init(scene, mass, camera)
 			var render = function () {
 				
 				requestAnimationFrame( render );
