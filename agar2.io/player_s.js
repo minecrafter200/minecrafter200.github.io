@@ -1,5 +1,6 @@
 var player_s = {}
 var circle
+var camera2
 player_s.init = function(scene, mass, camera) {
       var color = new THREE.Color(Math.random(),Math.random(),Math.random());
       
@@ -9,7 +10,9 @@ player_s.init = function(scene, mass, camera) {
       circle = new THREE.Mesh( geometry, material );
       circle.position.z = 0.5
       scene.add(circle)
+camera2 = camera;
 }
 player_s.visual = function() {
 	circle.translateY(1);
+	camera2.position.set(circle.position.x,30,circle.position.z)
 }
