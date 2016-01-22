@@ -33,7 +33,7 @@ console.log((theta * (180/Math.PI)))
 
 player_s.visual = function() {
 	
-	circle.rotation.z = theta
+	circle.rotation.z = 360-theta
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
