@@ -16,11 +16,12 @@ camera2 = camera;
 function onMouseMove( event ) {
 
 
-	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;		
-console.log(mouse.x + "   " + mouse.y)
+	var mousex = ( event.clientX / window.innerWidth ) * 2 - 1;
+	var mousey = - ( event.clientY / window.innerHeight ) * 2 + 1;		
+console.log(mousex + "   " + mousey)
 }
 player_s.visual = function() {
+	
 	circle.rotation.z += 0.005 
 	circle.translateY(1);
 	
