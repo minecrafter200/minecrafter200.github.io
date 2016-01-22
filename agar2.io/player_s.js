@@ -32,7 +32,7 @@ console.log(theta)
 
 player_s.visual = function() {
 	
-	circle.rotation.z = Math.asin(mx/mh)
+	
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
