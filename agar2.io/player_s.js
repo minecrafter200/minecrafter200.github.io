@@ -14,5 +14,5 @@ camera2 = camera;
 }
 player_s.visual = function() {
 	circle.translateY(1);
-	camera2.position.set(circle.position.x,30,circle.position.z)
+	camera2.position.set(circle.position.x,circle.position.y,30)
 }
