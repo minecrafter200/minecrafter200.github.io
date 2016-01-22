@@ -19,8 +19,8 @@ var mh
 function onMouseMove( event ) {
 
 
-	var mousex = ( event.clientX / (window.innerWidth * 0.8) ) * 2 - 1;
-	var mousey = - ( event.clientY / (window.innerHeight * 0.8) ) * 2 + 1;	
+	var mousex = (( event.clientX / (window.innerWidth * 0.8) ) * 2 - 1)*20;
+	var mousey = - (( event.clientY / (window.innerHeight * 0.8) ) * 2 + 1)*20;	
 	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
 	mh = mouseh
 	mx = mousex
