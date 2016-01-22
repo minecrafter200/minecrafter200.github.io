@@ -13,7 +13,7 @@ player_s.init = function(scene, mass, camera) {
 camera2 = camera;
 }
 player_s.visual = function() {
-	circle.rotate(0.5)
+	circle.rotation.y += 0.5 
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
