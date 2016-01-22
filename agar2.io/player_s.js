@@ -13,6 +13,7 @@ player_s.init = function(scene, mass, camera) {
       scene.add(circle)
 camera2 = camera;
 }
+var mx
 var mh
 function onMouseMove( event ) {
 
@@ -21,12 +22,13 @@ function onMouseMove( event ) {
 	var mousey = - ( event.clientY / (window.innerHeight * 0.8) ) * 2 + 1;	
 	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
 	mh = mouseh
+	mx = mousex
 console.log(mousex + "   " + mousey + "   " + mouseh)
 }
 
 player_s.visual = function() {
 	
-	circle.rotation.z += 0.005 
+	circle.rotation.z += Math.asin(mx/mh)
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
