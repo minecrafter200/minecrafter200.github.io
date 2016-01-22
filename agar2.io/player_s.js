@@ -26,7 +26,7 @@ function onMouseMove( event ) {
 	mx = mousex
 	
 		theta = (Math.asin(mx/mh))*20
-console.log((theta * (180/pi)))
+console.log((theta * (180/Math.Pi)))
 	
 
 }
