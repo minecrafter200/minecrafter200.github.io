@@ -13,9 +13,9 @@ player_s.init = function(scene, mass, camera) {
       scene.add(circle)
 camera2 = camera;
 }
-var theta 
-var mx
-var mh
+var theta = 0
+var mx = 0
+var mh = 0
 function onMouseMove( event ) {
 
 
@@ -24,7 +24,7 @@ function onMouseMove( event ) {
 	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
 	mh = mouseh
 	mx = mousex
-
+		theta = Math.asin(mx/mh)
 
 	
 
@@ -32,7 +32,7 @@ function onMouseMove( event ) {
 
 player_s.visual = function() {
 	
-	circle.rotation.z = Math.asin(mx/mh)
+	circle.rotation.z = theta
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
