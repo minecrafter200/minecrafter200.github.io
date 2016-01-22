@@ -13,14 +13,17 @@ player_s.init = function(scene, mass, camera) {
       scene.add(circle)
 camera2 = camera;
 }
+var mh
 function onMouseMove( event ) {
 
 
 	var mousex = ( event.clientX / (window.innerWidth * 0.8) ) * 2 - 1;
 	var mousey = - ( event.clientY / (window.innerHeight * 0.8) ) * 2 + 1;	
 	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
-console.log(mousex + "   " + mousey)
+	mh = mouseh
+console.log(mousex + "   " + mousey + "   " + mouseh)
 }
+
 player_s.visual = function() {
 	
 	circle.rotation.z += 0.005 
