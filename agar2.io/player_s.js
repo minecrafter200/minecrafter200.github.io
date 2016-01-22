@@ -1,6 +1,6 @@
 var player_s = {}
 var circle
-player_s.init = function(scene, mass) {
+player_s.init = function(scene, mass, camera) {
       var color = new THREE.Color(Math.random(),Math.random(),Math.random());
       
       var geometry = new THREE.CircleGeometry( ((mass)*10), 64);
