@@ -25,7 +25,7 @@ function onMouseMove( event ) {
 	mh = mouseh
 	mx = mousex
 theta = Math.asin(mx/mh)
-console.log(theta)
+console.log("t:" + theta + "     x:" + mx + "     y:" + my)
 	
 
 }
