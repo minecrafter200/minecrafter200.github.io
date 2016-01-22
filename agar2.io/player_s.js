@@ -23,12 +23,14 @@ function onMouseMove( event ) {
 	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
 	mh = mouseh
 	mx = mousex
+
+	
 console.log(mousex + "   " + mousey + "   " + mouseh)
 }
 
 player_s.visual = function() {
 	
-	circle.rotation.z += Math.asin(mx/mh)
+	circle.rotation.z = Math.asin(mx/mh)
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
