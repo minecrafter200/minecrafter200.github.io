@@ -17,7 +17,8 @@ function onMouseMove( event ) {
 
 
 	var mousex = ( event.clientX / (window.innerWidth * 0.8) ) * 2 - 1;
-	var mousey = - ( event.clientY / (window.innerHeight * 0.8) ) * 2 + 1;		
+	var mousey = - ( event.clientY / (window.innerHeight * 0.8) ) * 2 + 1;	
+	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
 console.log(mousex + "   " + mousey)
 }
 player_s.visual = function() {
