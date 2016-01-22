@@ -16,8 +16,8 @@ camera2 = camera;
 function onMouseMove( event ) {
 
 
-	var mousex = ( event.clientX / window.innerWidth ) * 2 - 1;
-	var mousey = - ( event.clientY / window.innerHeight ) * 2 + 1;		
+	var mousex = ( event.clientX / (window.innerWidth * 0.8) ) * 2 - 1;
+	var mousey = - ( event.clientY / (window.innerHeight * 0.8) ) * 2 + 1;		
 console.log(mousex + "   " + mousey)
 }
 player_s.visual = function() {
