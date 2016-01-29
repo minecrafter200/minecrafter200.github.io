@@ -21,10 +21,10 @@ var priorY = 0;
 var mouseh;
 function onMouseMove( event ) {
 
-	delta_x = (( event.clientX / (window.innerWidth * 0.8) ) ) - circle.position.x;
+	delta_x = (( event.clientX / (window.innerWidth * 0.8) ) );
 	priorX = (( event.clientX / (window.innerWidth * 0.8) ) );
 	
-	delta_y = (( event.clientY / (window.innerWidth * 0.8) ) ) - circle.position.y;
+	delta_y = (( event.clientY / (window.innerWidth * 0.8) ) );
 	var priorY = - (( event.clientY / (window.innerHeight * 0.8) ) );	
 	mouseh = Math.pow(delta_x,2)+Math.pow(delta_y,2);
 	
