@@ -38,7 +38,7 @@ player_s.visual = function() {
 	//circle.rotation.z = theta
 	if(circle!=null){
 		if(theta>0){
-		circle.rotation.z = theta;
+		circle.rotation.z = (theta*2);
 		}
 	}
 	circle.translateY(1);
