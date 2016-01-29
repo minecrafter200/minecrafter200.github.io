@@ -22,6 +22,7 @@ function onMouseMove( event ) {
 	delta_y = ( 0.5 - (event.clientY / (window.innerHeight * 0.8)));
 	
 	theta = (Math.atan(delta_x/delta_y))
+	console.log(theta);
 	if(theta<0){
 		//theta = Math.PI + theta;
 	}
