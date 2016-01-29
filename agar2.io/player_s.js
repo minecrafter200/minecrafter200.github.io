@@ -29,8 +29,8 @@ function onMouseMove( event ) {
 	mouseh = Math.pow(delta_x,2)+Math.pow(delta_y,2);
 	
 	theta = (Math.atan(delta_y/delta_x))
-//console.log("MH " + mh);
-//console.log("Mx " + mx);
+console.log("delta_y " + delta_y);
+console.log("delta_x " + delta_x);
 console.log("Theta " + theta);
 	
 
