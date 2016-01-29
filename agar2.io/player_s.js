@@ -26,15 +26,16 @@ function onMouseMove( event ) {
 	mx = mousex
 	
 	theta = (Math.asin(mx/mh))
-console.log("MH " + mh);
-console.log("Mx " + mx);
+//console.log("MH " + mh);
+//console.log("Mx " + mx);
+console.log("Theta " + theta);
 	
 
 }
 
 player_s.visual = function() {
 	
-	circle.rotation.z = 360-theta
+	//circle.rotation.z = 360-theta
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
