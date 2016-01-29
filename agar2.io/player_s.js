@@ -26,7 +26,7 @@ function onMouseMove( event ) {
 	
 	delta_y = (( event.clientY / (window.innerWidth * 0.8) ) ) - priorY;
 	var priorY = - (( event.clientY / (window.innerHeight * 0.8) ) );	
-	mouseh = Math.pow(mousex,2)+Math.pow(mousey,2);
+	mouseh = Math.pow(mousex,2)+Math.pow(delta_y,2);
 	
 	theta = (Math.asin(delta_x/mouseh))
 //console.log("MH " + mh);
