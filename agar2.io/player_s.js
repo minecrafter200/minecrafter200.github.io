@@ -37,7 +37,7 @@ player_s.visual = function() {
 	
 	//circle.rotation.z = theta
 	if(circle!=null){
-	//circle.rotation.set(new THREE.Vector3( 0, Math.PI/2, 0));
+	circle.rotation.z = Math.PI/2;
 	}
 	circle.translateY(1);
 	
