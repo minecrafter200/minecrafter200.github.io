@@ -1,4 +1,5 @@
-var material = new THREE.LineBasicMaterial({
+function dline(scene) {
+	var material = new THREE.LineBasicMaterial({
 	color: 0x0000ff
 });
 
@@ -11,3 +12,4 @@ geometry.vertices.push(
 
 var line = new THREE.Line( geometry, material );
 scene.add( line );
+}
