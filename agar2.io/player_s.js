@@ -16,22 +16,15 @@ camera2 = camera;
 var theta = 0
 var delta_x = 0
 var delta_y = 0
-var priorX = 0;
-var priorY = 0;
-var mouseh;
 function onMouseMove( event ) {
-	var center_X = (window.innerWidth * 0.8)/2;
-	var center_Y = (window.innerHeight * 0.8)/2;
 	delta_x = ( 0.5 - (event.clientX / (window.innerWidth * 0.8)) );
 	
 	delta_y = ( 0.5 - (event.clientY / (window.innerHeight * 0.8)));
 	
-	mouseh = Math.pow(delta_x,2)+Math.pow(delta_y,2);
-	
-	theta = (Math.atan(delta_y/delta_x))
-console.log("delta_y " + delta_y);
-console.log("delta_x " + delta_x);
-console.log("Theta " + theta);
+	theta = (Math.atan(delta_x/delta_y))
+	if(theta<0){
+		theta = Math.PI + theta;
+	}
 	
 
 }
