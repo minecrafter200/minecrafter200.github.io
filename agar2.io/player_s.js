@@ -14,18 +14,21 @@ player_s.init = function(scene, mass, camera) {
 camera2 = camera;
 }
 var theta = 0
-var mx = 0
-var mh = 0
+var delta_x = 0
+var delta_y = 0
+var priorX = 0;
+var priorY = 0;
+var mouseh;
 function onMouseMove( event ) {
 
-
-	var mousex = (( event.clientX / (window.innerWidth * 0.8) ) );
-	var mousey = - (( event.clientY / (window.innerHeight * 0.8) ) );	
-	var mouseh = Math.pow(mousex,2)+Math.pow(mousey,2)
-	mh = mouseh
-	mx = mousex
+	delta_x = (( event.clientX / (window.innerWidth * 0.8) ) ) - priorX;
+	priorX = (( event.clientX / (window.innerWidth * 0.8) ) );
 	
-	theta = (Math.asin(mx/mh))
+	delta_y = (( event.clientY / (window.innerWidth * 0.8) ) ) - priorY;
+	var priorY = - (( event.clientY / (window.innerHeight * 0.8) ) );	
+	mouseh = Math.pow(mousex,2)+Math.pow(mousey,2);
+	
+	theta = (Math.asin(delta_x/mouseh))
 //console.log("MH " + mh);
 //console.log("Mx " + mx);
 console.log("Theta " + theta);
@@ -38,7 +41,7 @@ player_s.visual = function() {
 	//circle.rotation.z = theta
 	if(circle!=null){
 		if(theta>0){
-		circle.rotation.z = (theta*2);
+		circle.rotation.z = (theta);
 		}
 	}
 	circle.translateY(1);
