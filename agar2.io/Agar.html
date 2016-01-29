@@ -65,6 +65,8 @@ n = n + 100
 	new THREE.Vector3( n, -11180.3, 0 ),
 	new THREE.Vector3( n, 11180.3, 0 )
 	);
+	var line = new THREE.Line( geometry, material );
+scene.add( line );
 }
 var n = -11181
 while (n < 11181) {
@@ -74,10 +76,11 @@ n = n + 100
 	new THREE.Vector3( -11180.3, n, 0 ),
 	new THREE.Vector3( 11180.3, n, 0 )
 	);
+	var line = new THREE.Line( geometry, material );
+scene.add( line );
 }
 
-var line = new THREE.Line( geometry, material );
-scene.add( line );
+
 }
 		</script>
 	</body>
