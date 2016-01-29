@@ -24,7 +24,7 @@ function onMouseMove( event ) {
 	theta = (Math.atan(delta_x/delta_y))
 	console.log(theta);
 	if(delta_y<0){
-		theta = Math.PI + ((Math.PI/2)theta);
+		theta = Math.PI + ((Math.PI/2)-theta));
 	}
 	
 
