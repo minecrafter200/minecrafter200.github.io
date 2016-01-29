@@ -23,7 +23,7 @@ function onMouseMove( event ) {
 
 	delta_x = (( event.clientX / (window.innerWidth * 0.8) ) );
 	
-	delta_y = ( event.clientY );
+	delta_y = ( event.clientY / (window.innerHeight * 0.8));
 	
 	mouseh = Math.pow(delta_x,2)+Math.pow(delta_y,2);
 	
