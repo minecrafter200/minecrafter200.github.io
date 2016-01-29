@@ -58,9 +58,13 @@ function dline(scene) {
 
 var geometry = new THREE.Geometry();
 geometry.vertices.push(
-	new THREE.Vector3( -10, 0, 0 ),
-	new THREE.Vector3( 0, 10, 0 ),
-	new THREE.Vector3( 10, 0, 0 )
+	int n = 0
+	while (n < 11181) {
+	n = n + 1
+	new THREE.Vector3( n, -11180.3, 0 ),
+	new THREE.Vector3( n, 11180.3, 0 ),
+	}
+
 );
 
 var line = new THREE.Line( geometry, material );
