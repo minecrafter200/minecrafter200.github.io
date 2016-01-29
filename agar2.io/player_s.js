@@ -23,7 +23,7 @@ function onMouseMove( event ) {
 	
 	theta = (Math.atan(delta_x/delta_y))
 	if(theta<0){
-		theta = Math.PI + theta;
+		//theta = Math.PI + theta;
 	}
 	
 
@@ -33,9 +33,9 @@ player_s.visual = function() {
 	
 	//circle.rotation.z = theta
 	if(circle!=null){
-		if(theta>0){
+		
 		circle.rotation.z = theta;
-		}
+		
 	}
 	circle.translateY(1);
 	
