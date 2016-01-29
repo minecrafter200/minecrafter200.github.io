@@ -25,7 +25,7 @@ function onMouseMove( event ) {
 	mh = mouseh
 	mx = mousex
 	
-	theta = (Math.asin(mx/mh))
+	theta = (Math.acos(mx/mh))
 //console.log("MH " + mh);
 //console.log("Mx " + mx);
 console.log("Theta " + theta);
