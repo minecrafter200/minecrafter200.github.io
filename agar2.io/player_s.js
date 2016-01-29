@@ -35,7 +35,8 @@ console.log("Theta " + theta);
 
 player_s.visual = function() {
 	
-	circle.rotation.z = theta
+	//circle.rotation.z = theta
+	circle.rotation.set(new THREE.Vector3( 0, 0, theta));
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
