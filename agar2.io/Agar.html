@@ -56,10 +56,11 @@ function dline(scene) {
 	color: 0x0000ff
 });
 
-var geometry = new THREE.Geometry();
+
 var n = -11181
 while (n < 11181) {
 n = n + 100 
+	var geometry = new THREE.Geometry();
 	geometry.vertices.push(
 		
 	new THREE.Vector3( n, -11180.3, 0 ),
@@ -71,6 +72,7 @@ scene.add( line );
 var n = -11181
 while (n < 11181) {
 n = n + 100 
+	var geometry = new THREE.Geometry();
 	geometry.vertices.push(
 		
 	new THREE.Vector3( -11180.3, n, 0 ),
