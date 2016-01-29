@@ -57,15 +57,15 @@ function dline(scene) {
 });
 
 var geometry = new THREE.Geometry();
-geometry.vertices.push(
-	int n = 0
-	while (n < 11181) {
-	n = n + 1
+int n = 0
+while (n < 11181) {
+n = n + 1 
+	geometry.vertices.push(
+		
 	new THREE.Vector3( n, -11180.3, 0 ),
 	new THREE.Vector3( n, 11180.3, 0 ),
-	}
-
-);
+	);
+}
 
 var line = new THREE.Line( geometry, material );
 scene.add( line );
