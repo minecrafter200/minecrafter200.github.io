@@ -1,5 +1,5 @@
 var player_s = {}
-var circle
+var circle = null;
 var camera2
 player_s.init = function(scene, mass, camera) {
 	window.addEventListener( 'mousemove', onMouseMove, false );
@@ -36,9 +36,9 @@ console.log("Theta " + theta);
 player_s.visual = function() {
 	
 	//circle.rotation.z = theta
-	//if(theta>null){
+	if(circle!=null){
 	circle.rotation.set(new THREE.Vector3( 0, Math.PI/2, 0));
-	//}
+	}
 	circle.translateY(1);
 	
 	// need to set z to mass. (+mass)
