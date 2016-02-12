@@ -1,7 +1,7 @@
 var Agar = {}
 var circle = null;
 var camera2
-Agar.initSpawn = function{
+Agar.initSpawn = function(){
 var color = new THREE.Color(Math.random(),Math.random(),Math.random());
 	
      for(i=0;i<3000;i++) {
