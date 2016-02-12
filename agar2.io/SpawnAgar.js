@@ -8,7 +8,8 @@ Agar.initSpawn = function(){
      	x=(Math.random()-Math.random())*((1/2)*11180.3);
      	y=(Math.random()-Math.random())*((1/2)*11180.3);
      	var color = new THREE.Color(Math.random(),Math.random(),Math.random());
-      var geometry = new THREE.CircleGeometry( (1), 64);
+     	
+      var geometry = new THREE.CircleGeometry( (10), 64);
 			var material = new THREE.MeshPhongMaterial()
 			material.color = color
       circle = new THREE.Mesh( geometry, material );
