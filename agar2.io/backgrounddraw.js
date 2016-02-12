@@ -1,6 +1,6 @@
 function dline(scene) {
 	var material = new THREE.LineBasicMaterial({
-	color: 0x0000ff
+	color: 0x000000
 });
 
 var geometry = new THREE.Geometry();
