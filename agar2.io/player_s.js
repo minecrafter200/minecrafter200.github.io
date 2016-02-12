@@ -26,6 +26,7 @@ function onMouseMove( event ) {
 	if(delta_y<0&&delta_x>0){
 		theta = Math.PI + ((Math.PI/2)-theta);
 	}if(delta_y<0&&delta_x<0){
+		console.log("called");
 		theta = Math.PI + theta;
 	}
 	
