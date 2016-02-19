@@ -60,13 +60,14 @@ function dline(scene) {
 
 
 var n = -11181
+for(int z =-11181; z<11181; z++){
 while (n < 11181) {
 n = n + 200
 	var geometry = new THREE.Geometry();
 	geometry.vertices.push(
 		
-	new THREE.Vector3( n, -11180.3, 0 ),
-	new THREE.Vector3( n, 11180.3, 0 )
+	new THREE.Vector3( n, -11180.3, z ),
+	new THREE.Vector3( n, 11180.3, z )
 	);
 	var line = new THREE.Line( geometry, material );
 	scene.add( line );
@@ -77,8 +78,8 @@ n = n + 200
 	var geometry = new THREE.Geometry();
 	geometry.vertices.push(
 		
-	new THREE.Vector3( -11180.3, n, 0 ),
-	new THREE.Vector3( 11180.3, n, 0 )
+	new THREE.Vector3( -11180.3, n, z ),
+	new THREE.Vector3( 11180.3, n, z )
 	);
 	var line = new THREE.Line( geometry, material );
 scene.add( line );
@@ -95,7 +96,7 @@ n = n + 200
 	);
 	var line = new THREE.Line( geometry, material );
 scene.add( line );
-
+}
 }
 }
 
