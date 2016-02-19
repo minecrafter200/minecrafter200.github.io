@@ -82,6 +82,20 @@ n = n + 200
 	var line = new THREE.Line( geometry, material );
 scene.add( line );
 }
+
+var n = -11181
+while (n < 11181) {
+n = n + 200
+	var geometry = new THREE.Geometry();
+	geometry.vertices.push(
+		
+	new THREE.Vector3( 0, -11180.3, n ),
+	new THREE.Vector3( 0, -11180.3, n )
+	);
+	var line = new THREE.Line( geometry, material );
+scene.add( line );
+
+}
 }
 
 
