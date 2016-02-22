@@ -43,9 +43,9 @@ var v1 = new THREE.Vector3(0,0,0);
 var v2 = new THREE.Vector3(0,2,0);
 var v3 = new THREE.Vector3(0,2,2);
 
-geom.vertices.push(new THREE.Vertex(v1));
-geom.vertices.push(new THREE.Vertex(v2));
-geom.vertices.push(new THREE.Vertex(v3));
+geom.vertices.push(v1);
+geom.vertices.push(v2);
+geom.vertices.push(v3);
 			object = new THREE.Mesh( geom, material );
 			cube = new THREE.BoxHelper( object );
 			cube.material.color.set( 0x73E3FA);
