@@ -33,9 +33,12 @@
 
 			var light = new THREE.AmbientLight( ); // soft white light
 			scene.add( light );
-			var cube = new THREE.BoxHelper();
-			cube.material.color.setRGB( 1, 0, 0 );
-			cube.scale.set( 1, 1, 1 );
+			//var cube = new THREE.BoxHelper();
+			//cube.material.color.setRGB( 1, 0, 0 );
+			
+			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 			//dline(scene)
 			
@@ -43,7 +46,7 @@
 			camera.position.z = 10;
 			//camera.rotation.y = 0.01
 			//camera.zoom = (1/(((mass*10)*2)));
-		camera.updateProjectionMatrix();
+			camera.updateProjectionMatrix();
 			//Agar.initSpawn()
 			//player_s.init(scene, mass, camera)
 			var render = function () {
