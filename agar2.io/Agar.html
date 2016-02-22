@@ -43,18 +43,24 @@ var v1 = new THREE.Vector3(-1,1,1);
 var v2 = new THREE.Vector3(1,1,1);
 var v3 = new THREE.Vector3(-1,-1,1);
 var v4 = new THREE.Vector3(1,-1,1);
-
+var v1 = new THREE.Vector3(-1,1,-1);
+var v2 = new THREE.Vector3(1,1,-1);
+var v3 = new THREE.Vector3(-1,-1,-1);
+var v4 = new THREE.Vector3(1,-1,-1);
 
 
 geom.vertices.push(v1);
 geom.vertices.push(v2);
 geom.vertices.push(v3);
 geom.vertices.push(v4);
+geom.vertices.push(v5);
+geom.vertices.push(v6);
+geom.vertices.push(v7);
+geom.vertices.push(v8);
 
-geom.faces.push( new THREE.Face3( 0, 1, 2, 3,4) );
 			object = new THREE.Mesh( geom, material );
 			cube = new THREE.BoxHelper( object );
-			cube.material.color.setHex( 0x68E4FC );
+			cube.material.color.setHex( 0x00ABF5 );
 			cube.material.blending = THREE.AdditiveBlending;
 			cube.material.transparent = true;
 			scene.add( cube );
