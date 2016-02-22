@@ -33,13 +33,12 @@
 
 			var light = new THREE.AmbientLight( ); // soft white light
 			scene.add( light );
+			
 			geometry = new THREE.BoxGeometry( 2,2,2, 2, 2, 2 );
 			material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
 			object = new THREE.Mesh( geometry, material );
-
-			wireframe = new THREE.WireframeHelper( object, 0x00ff00 );
 			cube = new THREE.BoxHelper( object );
-			cube.material.color.set( 0x00ff00 );
+			cube.material.color.set( 0x73E3FA);
 			scene.add( cube );
 			//scene.add( wireframe );
 		
