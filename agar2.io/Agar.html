@@ -33,13 +33,13 @@
 
 			var light = new THREE.AmbientLight( ); // soft white light
 			scene.add( light );
-			//var cube = new THREE.BoxHelper();
-			//cube.material.color.setRGB( 1, 0, 0 );
+			var cube = new THREE.BoxHelper();
+			cube.material.color.setRGB( 1, 0, 0 );
 			
-			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-			var cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+			//var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			//var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+			//var cube = new THREE.Mesh( geometry, material );
+			//scene.add( cube );
 			//dline(scene)
 			
 			var mass = 10;
