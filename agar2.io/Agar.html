@@ -33,7 +33,10 @@
 
 			var light = new THREE.AmbientLight( ); // soft white light
 			scene.add( light );
-			
+			var cube = new THREE.BoxHelper();
+			cube.material.color.setRGB( 1, 0, 0 );
+			cube.scale.set( 10, 10, 10 );
+			scene.add( cube );
 			//dline(scene)
 			
 			var mass = 10;
@@ -41,13 +44,13 @@
 			//camera.rotation.y = 0.01
 			//camera.zoom = (1/(((mass*10)*2)));
 		camera.updateProjectionMatrix();
-			Agar.initSpawn()
-			player_s.init(scene, mass, camera)
+			//Agar.initSpawn()
+			//player_s.init(scene, mass, camera)
 			var render = function () {
 				
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
-				player_s.visual()
+				//player_s.visual()
 			};
 		//renderer.setClearColorHex( 0xffffff, 1 );
 			render();
