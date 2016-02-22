@@ -35,12 +35,12 @@
 			scene.add( light );
 			var cube = new THREE.BoxHelper();
 			cube.material.color.setRGB( 1, 0, 0 );
-			cube.scale.set( 10, 10, 10 );
+			cube.scale.set( 1, 1, 1 );
 			scene.add( cube );
 			//dline(scene)
 			
 			var mass = 10;
-			camera.position.z = 5;
+			camera.position.z = 10;
 			//camera.rotation.y = 0.01
 			//camera.zoom = (1/(((mass*10)*2)));
 		camera.updateProjectionMatrix();
