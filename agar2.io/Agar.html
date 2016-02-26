@@ -135,7 +135,34 @@ for(var i = 0; i < splinePoints.length; i++){
 
 var line = new THREE.Line(geometry, material);
 scene.add(line);
+var numPoints = 100;
+spline = new THREE.SplineCurve3([
+   new THREE.Vector3(0, 20, 0),
+   new THREE.Vector3(10, 15.5, 4.5),
+   new THREE.Vector3(20, 20, 0),
+   new THREE.Vector3(30, 20, 0),
+   new THREE.Vector3(40, 20, 0),
+   new THREE.Vector3(50, 20, 0),
+   new THREE.Vector3(60, 20, 0),
+   new THREE.Vector3(70, 20, 0),
+   new THREE.Vector3(80, 20, 0),
+   new THREE.Vector3(90, 20, 0),
+   new THREE.Vector3(100, 20, 0)
+]);
 
+var material = new THREE.LineBasicMaterial({
+    color: 0x00ABF5,
+});
+
+var geometry = new THREE.Geometry();
+var splinePoints = spline.getPoints(numPoints);
+
+for(var i = 0; i < splinePoints.length; i++){
+    geometry.vertices.push(splinePoints[i]);  
+}
+
+var line = new THREE.Line(geometry, material);
+scene.add(line);
 //Line three
 var numPoints = 100;
 spline = new THREE.SplineCurve3([
