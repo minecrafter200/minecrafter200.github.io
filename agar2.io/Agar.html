@@ -3,11 +3,11 @@
 		<title>My first Three.js app</title>
 		<style>
 			body { margin: 0; }
-			canvas { width: 87.5%; height: 75% }
+			canvas { width: 80%; height: 80% }
 
 			#agarFeild { 
                 position: absolute;
-                height: 75%; 
+                height: 80%; 
                 width: 80%; 
 
             }
@@ -15,32 +15,25 @@
 		</style>
 
 	</head>
-	<body style="background-color:lightgrey;">
+	<body>
 
-		<div id="agarFeild"style="background-color:black;" >
+		<div id="agarFeild" >
 		<script src="player_s.js"></script>	
-		<script src="SpawnAgar.js"></script>
 		</div>
 		<script src="three.min.js"></script>
 		<script src="OrbitControls.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r74/three.js"></script>
-		
 		<script>
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera( 75, (0.8*window.innerWidth)/(0.8*window.innerHeight), 0.1, 1000 );
 
 
-			var renderer = new THREE.WebGLRenderer({ alpha: true });
+			var renderer = new THREE.WebGLRenderer();
 			renderer.setSize( 0.8*window.innerWidth, 0.8*window.innerHeight );
 			document.getElementById("agarFeild").appendChild( renderer.domElement );
-			var controls = new THREE.OrbitControls( camera, document.getElementById("agarFeild") );
-
+			controls = new THREE.OrbitControls( camera, document.getElementById("agarFeild") );
 			var light = new THREE.AmbientLight( ); // soft white light
 			scene.add( light );
-			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			var cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+
 			
 			var particlesData = [];
 			var segments = 1000 * 1000;
@@ -80,71 +73,149 @@
 				pointCloud = new THREE.Points( particles, pMaterial );
 
 				scene.add( pointCloud );
-			//scene.add( wireframe );
+
+// smooth my curve over this many points
+//Line One
+var numPoints = 100;
+spline = new THREE.SplineCurve3([
+   new THREE.Vector3(0, 0, 0),
+   new THREE.Vector3(10, 4.5, 4.5),
+   new THREE.Vector3(20, 0, 0),
+   new THREE.Vector3(30, 0, 0),
+   new THREE.Vector3(40, 0, 0),
+   new THREE.Vector3(50, 0, 0),
+   new THREE.Vector3(60, 0, 0),
+   new THREE.Vector3(70, 0, 0),
+   new THREE.Vector3(80, 0, 0),
+   new THREE.Vector3(90, 0, 0),
+   new THREE.Vector3(100, 0, 0)
+]);
+
+var material = new THREE.LineBasicMaterial({
+    color: 0x00ABF5,
+});
+
+var geometry = new THREE.Geometry();
+var splinePoints = spline.getPoints(numPoints);
+
+for(var i = 0; i < splinePoints.length; i++){
+    geometry.vertices.push(splinePoints[i]);  
+}
+
+var line = new THREE.Line(geometry, material);
+scene.add(line);
+
+
+//Line TWO
+var numPoints = 100;
+spline = new THREE.SplineCurve3([
+   new THREE.Vector3(0, 10, 0),
+   new THREE.Vector3(10, 5.5, 4.5),
+   new THREE.Vector3(20, 10, 0),
+   new THREE.Vector3(30, 10, 0),
+   new THREE.Vector3(40, 10, 0),
+   new THREE.Vector3(50, 10, 0),
+   new THREE.Vector3(60, 10, 0),
+   new THREE.Vector3(70, 10, 0),
+   new THREE.Vector3(80, 10, 0),
+   new THREE.Vector3(90, 10, 0),
+   new THREE.Vector3(100, 10, 0)
+]);
+
+var material = new THREE.LineBasicMaterial({
+    color: 0x00ABF5,
+});
+
+var geometry = new THREE.Geometry();
+var splinePoints = spline.getPoints(numPoints);
+
+for(var i = 0; i < splinePoints.length; i++){
+    geometry.vertices.push(splinePoints[i]);  
+}
+
+var line = new THREE.Line(geometry, material);
+scene.add(line);
+
+//Line three
+var numPoints = 100;
+spline = new THREE.SplineCurve3([
+   new THREE.Vector3(0, 0, 10),
+   new THREE.Vector3(10, 4.5, 5.5),
+   new THREE.Vector3(20, 0, 10),
+   new THREE.Vector3(30, 0, 10),
+   new THREE.Vector3(40, 0, 10),
+   new THREE.Vector3(50, 0, 10),
+   new THREE.Vector3(60, 0, 10),
+   new THREE.Vector3(70, 0, 10),
+   new THREE.Vector3(80, 0, 10),
+   new THREE.Vector3(90, 0, 10),
+   new THREE.Vector3(100, 0, 10)
+]);
+
+var material = new THREE.LineBasicMaterial({
+    color: 0x00ABF5,
+});
+
+var geometry = new THREE.Geometry();
+var splinePoints = spline.getPoints(numPoints);
+
+for(var i = 0; i < splinePoints.length; i++){
+    geometry.vertices.push(splinePoints[i]);  
+}
+
+var line = new THREE.Line(geometry, material);
+scene.add(line);
 		
-			//dline(scene)
-			
-	
+//Line for
+var numPoints = 100;
+spline = new THREE.SplineCurve3([
+   new THREE.Vector3(0, 10, 10),
+   new THREE.Vector3(10, 5.5, 5.5),
+   new THREE.Vector3(20, 10, 10),
+   new THREE.Vector3(30, 10, 10),
+   new THREE.Vector3(40, 10, 10),
+   new THREE.Vector3(50, 10, 10),
+   new THREE.Vector3(60, 10, 10),
+   new THREE.Vector3(70, 10, 10),
+   new THREE.Vector3(80, 10, 10),
+   new THREE.Vector3(90, 10, 10),
+   new THREE.Vector3(100, 10, 10)
+]);
+
+var material = new THREE.LineBasicMaterial({
+    color: 0x00ABF5,
+});
+
+var geometry = new THREE.Geometry();
+var splinePoints = spline.getPoints(numPoints);
+
+for(var i = 0; i < splinePoints.length; i++){
+    geometry.vertices.push(splinePoints[i]);  
+}
+
+var line = new THREE.Line(geometry, material);
+scene.add(line);
+
+
+var geometry = new THREE.SphereGeometry( 1, 40, 40 ); 
+var material = new THREE.MeshNormalMaterial(); 
+var sphere = new THREE.Mesh( geometry, material ); 
+sphere.position.x = 10;
+sphere.position.y = 5;
+sphere.position.z = 5;
+scene.add( sphere );
+
+
+			camera.position.z = 5;
+			camera.updateProjectionMatrix();
+
 			var render = function () {
 				
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
-				//player_s.visual()
 			};
-		//renderer.setClearColorHex( 0xffffff, 1 );
+
 			render();
-			
-			
-			
-function dline(scene) {
-	var material = new THREE.LineBasicMaterial({
-	color: 0x000000
-});
-
-
-var n = -11181
-for(z = -50; z<50; z= z+10){
-while (n < 11181) {
-n = n + 200
-	var geometry = new THREE.Geometry();
-	geometry.vertices.push(
-		
-	new THREE.Vector3( n, -11180.3, z ),
-	new THREE.Vector3( n, 11180.3, z )
-	);
-	var line = new THREE.Line( geometry, material );
-	scene.add( line );
-}
-var n = -11181
-while (n < 11181) {
-n = n + 200
-	var geometry = new THREE.Geometry();
-	geometry.vertices.push(
-		
-	new THREE.Vector3( -11180.3, n, z ),
-	new THREE.Vector3( 11180.3, n, z )
-	);
-	var line = new THREE.Line( geometry, material );
-scene.add( line );
-}
-
-var n = -11181
-while (n < 11181) {
-n = n + 200
-	var geometry = new THREE.Geometry();
-	geometry.vertices.push(
-		
-	new THREE.Vector3( z, -11180.3, n ),
-	new THREE.Vector3( z, -11180.3, n )
-	);
-	var line = new THREE.Line( geometry, material );
-scene.add( line );
-}
-}
-}
-
-
-
 		</script>
 	</body>
 </html>
