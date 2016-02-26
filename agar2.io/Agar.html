@@ -73,6 +73,23 @@
 				pointCloud = new THREE.Points( particles, pMaterial );
 
 				scene.add( pointCloud );
+				var numPoints = 10
+				spline = new THREE.SplineCurve3({
+					new THREE.Vector3(0,0,0),
+					new THREE.Vector3(100,0,0)
+					
+				})
+				var material = new THREE.LineBasicMaterial({
+					color: 0x00abf5,
+				})
+				var geometry = new THREE.Geometry
+				var splinePoints = spline.getPoints(numPoints);
+				
+				for( var i = 0; i < splinePoints.length; i++){
+					geometry.vertices.push(splinePoints[i])
+				}
+				var line = new THREE.line(geometry, material);
+				scene.add(line);
 
 
 
