@@ -3,12 +3,12 @@
 		<title>My first Three.js app</title>
 		<style>
 			body { margin: 0; }
-			canvas { width: 70%; height: 60% }
+			canvas { width: 87.5%; height: 75% }
 
 			#agarFeild { 
                 position: absolute;
-                height: 60%; 
-                width: 70%; 
+                height: 80%; 
+                width: 80%; 
 
             }
 
@@ -22,7 +22,7 @@
 		<script src="SpawnAgar.js"></script>
 		</div>
 		<script src="three.min.js"></script>
-		<script src="OrbitControls.js"></script>
+		<script src="../OrbitControls.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r74/three.js"></script>
 		
 		<script>
@@ -33,7 +33,7 @@
 			var renderer = new THREE.WebGLRenderer({ alpha: true });
 			renderer.setSize( 0.8*window.innerWidth, 0.8*window.innerHeight );
 			document.getElementById("agarFeild").appendChild( renderer.domElement );
-			controls = new THREE.OrbitControls( camera, document.getElementById("agarFeild") );
+			var controls = new THREE.OrbitControls( camera, document.getElementById("agarFeild") );
 
 			var light = new THREE.AmbientLight( ); // soft white light
 			scene.add( light );
