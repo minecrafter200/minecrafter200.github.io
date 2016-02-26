@@ -39,24 +39,6 @@
 			//geometry = new THREE.BoxGeometry( 2,2,2, 2, 2, 2 );
 			material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
 			var geom = new THREE.Geometry(); 
-var v1 = new THREE.Vector3(-1,1,1);
-var v2 = new THREE.Vector3(1,1,1);
-var v3 = new THREE.Vector3(-1,-1,1);
-var v4 = new THREE.Vector3(1,-1,1);
-var v5 = new THREE.Vector3(-1,1,-1);
-var v6 = new THREE.Vector3(1,1,-1);
-var v7 = new THREE.Vector3(-1,-1,-1);
-var v8 = new THREE.Vector3(1,-1,-1);
-
-
-geom.vertices.push(v1);
-geom.vertices.push(v2);
-geom.vertices.push(v3);
-geom.vertices.push(v4);
-geom.vertices.push(v5);
-geom.vertices.push(v6);
-geom.vertices.push(v7);
-geom.vertices.push(v8);
 
 			object = new THREE.Mesh( geom, material );
 			cube = new THREE.BoxHelper( object );
