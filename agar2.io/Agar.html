@@ -124,6 +124,7 @@ scene.add(line);
 
 count = count + 10
 }
+
 while (position<1000) {
 	
 	var z = (position%10)*10
@@ -135,6 +136,31 @@ while (position<1000) {
 	Space_Time[position] = new THREE.Vector3(x,y,z);
 	position++
 	
+}
+while (count<2000) {
+spline = new THREE.SplineCurve3([
+ Space_Time[count+0],
+ Space_Time[count+1],
+ Space_Time[count+2],
+ Space_Time[count+3],
+ Space_Time[count+4],
+ Space_Time[count+5],
+ Space_Time[count+6],
+ Space_Time[count+7],
+ Space_Time[count+8],
+ Space_Time[count+9]
+]);	
+var material = new THREE.LineBasicMaterial({
+    color: 0x00ABF5,
+});
+var geometry = new THREE.Geometry();
+var splinePoints = spline.getPoints(numPoints);
+for(var i = 0; i < splinePoints.length; i++){
+    geometry.vertices.push(splinePoints[i]);  
+}
+var line = new THREE.Line(geometry, material);
+scene.add(line);
+count = count + 10
 }
 
 var geometry = new THREE.SphereGeometry( 10, 40, 40 ); 
