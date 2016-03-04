@@ -124,8 +124,9 @@ scene.add(line);
 
 count = count + 10
 }
-
-while (position<2000) {
+var position2 = var position;
+var position = 0
+while (position<1000) {
 	
 	var z = (position%10)*10
 	var x = Math.floor(position/100)*10
@@ -133,11 +134,12 @@ while (position<2000) {
 	
 
 	
-	Space_Time[position] = new THREE.Vector3(x,y,z);
+	Space_Time[position2] = new THREE.Vector3(x,y,z);
+	position2++
 	position++
 	
 }
-while (count<2000) {
+while (count<1000) {
 spline = new THREE.SplineCurve3([
  Space_Time[count+0],
  Space_Time[count+1],
