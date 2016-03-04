@@ -124,6 +124,18 @@ scene.add(line);
 
 count = count + 10
 }
+while (position<1000) {
+	
+	var z = (position%10)*10
+	var x = Math.floor(position/100)*10
+	var y = Math.floor((position-(10*x))/10)*10
+	
+
+	
+	Space_Time[position] = new THREE.Vector3(x,y,z);
+	position++
+	
+}
 
 var geometry = new THREE.SphereGeometry( 10, 40, 40 ); 
 var material = new THREE.MeshNormalMaterial(); 
