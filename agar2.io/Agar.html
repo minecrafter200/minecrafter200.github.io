@@ -33,6 +33,12 @@
 			renderer.setSize( 0.8*window.innerWidth, 0.8*window.innerHeight );
 			document.getElementById("agarFeild").appendChild( renderer.domElement );
 			//FLY CONTROLS
+			var geometry = new THREE.SphereGeometry( 10, 40, 40 ); 
+var material = new THREE.MeshNormalMaterial(); 
+var sphere = new THREE.Mesh( geometry, material ); 
+sphere.position.x = 10;
+sphere.position.y = 5;
+sphere.position.z = 5;
 			controls = new THREE.FlyControls( sphere );
 
 				controls.movementSpeed = 1;
@@ -216,12 +222,7 @@ var line = new THREE.Line(geometry, material);
 scene.add(line);
 count = count + 10
 }
-var geometry = new THREE.SphereGeometry( 10, 40, 40 ); 
-var material = new THREE.MeshNormalMaterial(); 
-var sphere = new THREE.Mesh( geometry, material ); 
-sphere.position.x = 10;
-sphere.position.y = 5;
-sphere.position.z = 5;
+
 scene.add( sphere );
 
 
