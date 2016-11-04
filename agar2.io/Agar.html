@@ -33,7 +33,7 @@
 			renderer.setSize( 0.8*window.innerWidth, 0.8*window.innerHeight );
 			document.getElementById("agarFeild").appendChild( renderer.domElement );
 			//FLY CONTROLS
-			var geometry = new THREE.SphereGeometry( 3, 2, 2 ); 
+			var geometry = new THREE.SphereGeometry( 3, 40, 40 ); 
 var material = new THREE.MeshNormalMaterial(); 
 var sphere = new THREE.Mesh( geometry, material ); 
 sphere.position.x = 10;
@@ -236,7 +236,9 @@ scene.add( sphere );
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
 				camera.lookAt(sphere.position)
-				camera.position = sphere.position.x - 8
+				camera.position.x = sphere.position.x - 8
+				camera.position.y = sphere.position.y - 8
+				camera.position.z = sphere.position.z - 8
 			};
 
 			render();
