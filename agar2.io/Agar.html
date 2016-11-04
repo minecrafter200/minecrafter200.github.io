@@ -236,6 +236,7 @@ scene.add( sphere );
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
 				camera.lookAt(sphere.position)
+				camera.position = sphere.position.x - 8
 			};
 
 			render();
