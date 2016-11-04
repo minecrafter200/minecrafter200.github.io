@@ -206,9 +206,9 @@ THREE.FlyControls = function ( object, domElement ) {
 
 		var forward = ( this.moveState.forward || ( this.autoForward && ! this.moveState.back ) ) ? 1 : 0;
 
-		this.moveVector.x = ( - this.moveState.left    + this.moveState.right );
-		this.moveVector.y = ( - this.moveState.down    + this.moveState.up );
-		this.moveVector.z = ( - forward + this.moveState.back );
+		//this.moveVector.x = ( - this.moveState.left    + this.moveState.right );
+		//this.moveVector.y = ( - this.moveState.down    + this.moveState.up );
+		//this.moveVector.z = ( - forward + this.moveState.back );
 
 		//console.log( 'move:', [ this.moveVector.x, this.moveVector.y, this.moveVector.z ] );
 
