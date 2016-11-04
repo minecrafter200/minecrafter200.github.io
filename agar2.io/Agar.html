@@ -233,6 +233,7 @@ scene.add( sphere );
 				controls.update( delta );
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
+				camera.lookat(sphere)
 			};
 
 			render();
