@@ -39,7 +39,7 @@ var sphere = new THREE.Mesh( geometry, material );
 sphere.position.x = 10;
 sphere.position.y = 5;
 sphere.position.z = 5;
-			sphere.rotate.y = 180
+			mesh.rotation.set(new THREE.vector3(0,pi,0))
 			console.log(sphere);
 			controls = new THREE.FlyControls( sphere );
 
