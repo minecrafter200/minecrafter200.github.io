@@ -43,6 +43,8 @@ sphere.position.z = 5;
 			sphere.rotation.z = 0.0174533*180
 			console.log(sphere);
 			controls = new THREE.FlyControls( sphere );
+			controlcam = new THREE.OrbitControls( camera );
+
 
 				controls.movementSpeed = 1;
 				controls.domElement = document.getElementById("agarFeild");
