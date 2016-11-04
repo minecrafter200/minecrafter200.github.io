@@ -239,6 +239,7 @@ scene.add( sphere );
 				controls.update( delta );
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
+				controlcam.update( delta );
 				//camera.lookAt(sphere.position)
 				//camera.position.x = sphere.position.x - 8
 				//camera.position.y = sphere.position.y - 8
