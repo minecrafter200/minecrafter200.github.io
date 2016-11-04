@@ -44,7 +44,7 @@ sphere.position.z = 5;
 			sphere.rotation.y = 0
 			console.log(sphere);
 			controls = new THREE.FlyControls( sphere );
-			controlcam = new THREE.OrbitControls( camera );
+			
 
 
 				controls.movementSpeed = 1;
@@ -240,11 +240,10 @@ scene.add( sphere );
 				controls.update( delta );
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
-				controlcam.update( delta );
-				//camera.lookAt(sphere.position)
-				//camera.position.x = sphere.position.x - 8
-				//camera.position.y = sphere.position.y - 8
-				//camera.position.z = sphere.position.z - 8
+				camera.lookAt(sphere.position)
+				camera.position.x = sphere.position.x - 8
+				camera.position.y = sphere.position.y - 8
+				camera.position.z = sphere.position.z - 8
 				console.log(sphere.position.x);
 			};
 
