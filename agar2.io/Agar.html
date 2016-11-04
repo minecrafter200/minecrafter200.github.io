@@ -33,7 +33,7 @@
 			renderer.setSize( 0.8*window.innerWidth, 0.8*window.innerHeight );
 			document.getElementById("agarFeild").appendChild( renderer.domElement );
 			//FLY CONTROLS
-			controls = new THREE.FlyControls( camera );
+			controls = new THREE.FlyControls( sphere );
 
 				controls.movementSpeed = 1;
 				controls.domElement = document.getElementById("agarFeild");
