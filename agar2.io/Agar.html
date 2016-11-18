@@ -27,7 +27,7 @@
 			var clock = new THREE.Clock();
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera( 75, (0.8*window.innerWidth)/(0.8*window.innerHeight), 0.1, 1000 );
-			var cameracontrols = new THREE.OrbitControls( camera );
+			
 
 
 			var renderer = new THREE.WebGLRenderer();
@@ -36,7 +36,8 @@
 			//FLY CONTROLS
 			var geometry = new THREE.SphereGeometry( 3, 40, 40 ); 
 var material = new THREE.MeshNormalMaterial(); 
-var sphere = new THREE.Mesh( geometry, material ); 
+var sphere = new THREE.Mesh( geometry, material );
+			var cameracontrols = new THREE.OrbitControls( camera, null, sphere.position );
 sphere.position.x = 10;
 sphere.position.y = 5;
 sphere.position.z = 5;
