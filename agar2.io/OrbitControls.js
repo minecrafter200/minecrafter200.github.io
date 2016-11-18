@@ -161,7 +161,7 @@ THREE.OrbitControls = function ( object, domElement, _target ) {
 			var radius = offset.length() * scale;
 
 			// restrict radius to be between desired limits
-			radius = Math.max( scope.minDistance, Math.min( scope.maxDistance, radius ) );
+			radius = 20;
 
 			// move target to panned location
 			scope.target.add( panOffset );
