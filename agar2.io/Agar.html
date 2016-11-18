@@ -37,7 +37,7 @@
 			var geometry = new THREE.SphereGeometry( 3, 40, 40 ); 
 var material = new THREE.MeshNormalMaterial(); 
 var sphere = new THREE.Mesh( geometry, material );
-			var cameracontrols = new THREE.OrbitControls( camera, agarField, sphere.position );
+			var cameracontrols = new THREE.OrbitControls( camera, renderer.domElement, sphere.position );
 sphere.position.x = 10;
 sphere.position.y = 5;
 sphere.position.z = 5;
