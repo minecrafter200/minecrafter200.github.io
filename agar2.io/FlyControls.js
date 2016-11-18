@@ -234,8 +234,6 @@ THREE.FlyControls = function ( object, domElement ) {
 
 	this.dispose = function() {
 
-var _keydown = bind( this, this.keydown );
-		var _keyup = bind( this, this.keyup );
 
 		window.removeEventListener( 'keydown', _keydown, false );
 		window.removeEventListener( 'keyup', _keyup, false );
@@ -243,6 +241,9 @@ var _keydown = bind( this, this.keydown );
 	}
 
 
+var _keydown = bind( this, this.keydown );
+		var _keyup = bind( this, this.keyup );
+	
 	this.domElement.addEventListener( 'contextmenu', contextmenu, false );
 
 	//this.domElement.addEventListener( 'mousemove', _mousemove, false );
