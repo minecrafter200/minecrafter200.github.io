@@ -27,6 +27,7 @@
 			var clock = new THREE.Clock();
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera( 75, (0.8*window.innerWidth)/(0.8*window.innerHeight), 0.1, 1000 );
+			var cameracontrols = new THREE.OrbitControls( camera );
 
 
 			var renderer = new THREE.WebGLRenderer();
@@ -238,6 +239,7 @@ scene.add( sphere );
 			var render = function () {
 				var delta = clock.getDelta();
 				controls.update( delta );
+				cameracontrols.update ( delta );
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
 				//camera.lookAt(sphere.position)
