@@ -911,8 +911,8 @@ THREE.OrbitControls = function ( object, domElement, _target ) {
 	scope.domElement.addEventListener( 'contextmenu', onContextMenu, false );
 
 	scope.domElement.addEventListener( 'mousedown', onMouseDown, false );
-	scope.domElement.addEventListener( 'mousewheel', onMouseWheel, false );
-	scope.domElement.addEventListener( 'MozMousePixelScroll', onMouseWheel, false ); // firefox
+	//scope.domElement.addEventListener( 'mousewheel', onMouseWheel, false );
+	//scope.domElement.addEventListener( 'MozMousePixelScroll', onMouseWheel, false ); // firefox
 
 	scope.domElement.addEventListener( 'touchstart', onTouchStart, false );
 	scope.domElement.addEventListener( 'touchend', onTouchEnd, false );
