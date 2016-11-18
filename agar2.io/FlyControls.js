@@ -51,8 +51,6 @@ THREE.FlyControls = function ( object, domElement ) {
 
 		switch ( event.keyCode ) {
 
-			case 16: /* shift */ this.movementSpeedMultiplier = .1; break;
-
 			case 87: /*W*/ this.moveState.forward = 1; break;
 			case 83: /*S*/ this.moveState.back = 1; break;
 
@@ -70,8 +68,6 @@ THREE.FlyControls = function ( object, domElement ) {
 	this.keyup = function( event ) {
 
 		switch ( event.keyCode ) {
-
-			case 16: /* shift */ this.movementSpeedMultiplier = 1; break;
 
 			case 87: /*W*/ this.moveState.forward = 0; break;
 			case 83: /*S*/ this.moveState.back = 0; break;
@@ -238,10 +234,8 @@ THREE.FlyControls = function ( object, domElement ) {
 
 	this.dispose = function() {
 
-		this.domElement.removeEventListener( 'contextmenu', contextmenu, false );
-		this.domElement.removeEventListener( 'mousedown', _mousedown, false );
-		this.domElement.removeEventListener( 'mousemove', _mousemove, false );
-		this.domElement.removeEventListener( 'mouseup', _mouseup, false );
+var _keydown = bind( this, this.keydown );
+		var _keyup = bind( this, this.keyup );
 
 		window.removeEventListener( 'keydown', _keydown, false );
 		window.removeEventListener( 'keyup', _keyup, false );
@@ -257,6 +251,7 @@ THREE.FlyControls = function ( object, domElement ) {
 
 	window.addEventListener( 'keydown', _keydown, false );
 	window.addEventListener( 'keyup',   _keyup, false );
+
 
 	this.updateMovementVector();
 	this.updateRotationVector();
