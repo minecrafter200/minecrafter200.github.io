@@ -100,6 +100,15 @@ sphere.position.z = 5;
 
 //this is a comment
 //this is also a comment
+var texture = THREE.ImageUtils.LoadTexture("minecrafter200.github.io/TychoSkymapII.t5_04096x02048.jpg");
+var material = THREE.MeshBasicMaterial({
+	map : texture,
+	side : THREE.BackSide
+})
+var geometry = new Three.SphereGeometry(500, 500, 500);
+var mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);
+			
 var Space_Time = new Array();
 var position = 0
 while (position<1000) {
