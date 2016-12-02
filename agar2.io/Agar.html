@@ -238,9 +238,11 @@ scene.add( sphere );
 			camera.updateProjectionMatrix();
 
 			var render = function () {
-				sphere.rotation = camera.rotation;
+
 				var delta = clock.getDelta();
-				sphere.rotation.x = 3.1415
+				sphere.rotation.x = camera.rotation.x
+				sphere.rotation.y = camera.rotation.y
+				sphere.rotation.z = camera.rotation.z
 				//controls.update( delta );
 				cameracontrols.update ( delta );
 				requestAnimationFrame( render );
