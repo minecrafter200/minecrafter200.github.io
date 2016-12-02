@@ -240,7 +240,7 @@ scene.add( sphere );
 			var render = function () {
 				sphere.rotation = camera.rotation;
 				var delta = clock.getDelta();
-				controls.update( delta );
+				//controls.update( delta );
 				cameracontrols.update ( delta );
 				requestAnimationFrame( render );
 				renderer.render(scene, camera);
