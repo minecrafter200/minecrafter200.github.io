@@ -238,6 +238,7 @@ scene.add( sphere );
 			camera.updateProjectionMatrix();
 
 			var render = function () {
+				sphere.rotation = camera.rotation;
 				var delta = clock.getDelta();
 				controls.update( delta );
 				cameracontrols.update ( delta );
@@ -247,7 +248,6 @@ scene.add( sphere );
 				//camera.position.z = sphere.position.z +12
 				//camera.position.x = sphere.position.x
 				//camera.position.y = sphere.position.y
-				sphere.rotation = camera.rotation;
 				console.log(sphere.rotation)
 				console.log(camera.rotation)
 			}
