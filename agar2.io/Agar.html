@@ -100,8 +100,8 @@ sphere.position.z = 5;
 
 //this is a comment
 //this is also a comment
-var texture = THREE.TextureLoader("http://minecrafter200.github.io/TychoSkymapII.t5_04096x02048.jpg");
-var material = THREE.MeshBasicMaterial({
+var texture = new THREE.TextureLoader("http://minecrafter200.github.io/TychoSkymapII.t5_04096x02048.jpg");
+var material = new THREE.MeshBasicMaterial({
 	map : texture,
 	side : THREE.BackSide
 })
