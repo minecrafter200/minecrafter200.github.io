@@ -247,7 +247,9 @@ scene.add( sphere );
 				//camera.position.z = sphere.position.z +12
 				//camera.position.x = sphere.position.x
 				//camera.position.y = sphere.position.y
-				camera.rotation = sphere.rotation;
+				sphere.rotation = camera.rotation;
+				console.log(sphere.rotation)
+				console.log(camera.rotation)
 			}
 			render();
 		</script>
