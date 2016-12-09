@@ -100,7 +100,7 @@ sphere.position.z = 5;
 
 //this is a comment
 //this is also a comment
-var textureOne = new THREE.TextureLoader("http://minecrafter200.github.io/TychoSkymapII.t5_04096x02048.jpg");
+var textureOne = THREE.TextureLoader("http://minecrafter200.github.io/TychoSkymapII.t5_04096x02048.jpg");
 			console.log(textureOne);
 var materialOne = new THREE.MeshBasicMaterial({
 	map : textureOne,
@@ -112,7 +112,8 @@ var geometryOne = new THREE.SphereGeometry(200, 32, 32);
 			console.log(geometryOne);
 var meshOne = new THREE.Mesh(geometryOne, materialOne);
 			console.log(meshOne);
-//scene.add(meshOne);
+
+scene.add(meshOne);
 			
 var Space_Time = new Array();
 var position = 0
