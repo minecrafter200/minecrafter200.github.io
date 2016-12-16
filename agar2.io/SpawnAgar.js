@@ -1,5 +1,5 @@
 var Agar = {}
-var circle = null;
+var Sphere = null;
 var camera2
 Agar.initSpawn = function(){
 
@@ -9,15 +9,15 @@ Agar.initSpawn = function(){
      	y=(Math.random()-Math.random())*((1/2)*11180.3);
      	var color = new THREE.Color(Math.random(),Math.random(),Math.random());
      	
-      var geometry = new THREE.CircleGeometry( (10), 64);
+      var geometry = new THREE.SphereGeometry( 5, 32, 32 );
 			var material = new THREE.MeshPhongMaterial()
 			material.color = color
-      circle = new THREE.Mesh( geometry, material );
-      circle.position.z = 0.4
-      circle.position.x = x
-      circle.position.y = y
+      Sphere = new THREE.Mesh( geometry, material );
+      Sphere.position.z = 0.4
+      Sphere.position.x = x
+      Sphere.position.y = y
       
-      scene.add(circle)
+      scene.add(Sphere)
      
      }
 }
