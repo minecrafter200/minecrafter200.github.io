@@ -13,9 +13,9 @@ Agar.initSpawn = function(){
 			var material = new THREE.MeshPhongMaterial()
 			material.color = color
       Sphere = new THREE.Mesh( geometry, material );
-      Sphere.position.z = 0.4
-      Sphere.position.x = x
-      Sphere.position.y = y
+      Sphere.position.z = 0
+      Sphere.position.x = 0
+      Sphere.position.y = 0
       
       scene.add(Sphere)
      
