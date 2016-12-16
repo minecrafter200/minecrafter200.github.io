@@ -4,7 +4,7 @@ var camera2
 Agar.initSpawn = function(){
 
 	
-     for(i=0;i<3000;i++) {
+     for(i=0;i<2;i++) {
      	x=(Math.random()-Math.random())*((1/2)*11180.3);
      	y=(Math.random()-Math.random())*((1/2)*11180.3);
      	var color = new THREE.Color(Math.random(),Math.random(),Math.random());
