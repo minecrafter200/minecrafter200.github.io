@@ -5,7 +5,7 @@ player_s.init = function(scene, mass, camera) {
 	window.addEventListener( 'mousemove', onMouseMove, false );
       var color = new THREE.Color(Math.random(),Math.random(),Math.random());
       
-      var geometry = new THREE.CircleGeometry( ((mass)*10), 64);
+      var geometry = new THREE.CircleGeometry( ((mass)*0.25), 64);
 			var material = new THREE.MeshPhongMaterial()
 			material.color = color
       circle = new THREE.Mesh( geometry, material );
