@@ -11,7 +11,7 @@ Agar.initSpawn = function(){
      	var color = new THREE.Color(Math.random(),Math.random(),Math.random());
      	
       var geometry = new THREE.SphereGeometry( 0.25, 32, 32 );
-			var material = new THREE.MeshStandardMaterial()
+			var material = new THREE.MeshStandardMaterial();
 			material.color = color
       Sphere = new THREE.Mesh( geometry, material );
       Sphere.position.z = z
