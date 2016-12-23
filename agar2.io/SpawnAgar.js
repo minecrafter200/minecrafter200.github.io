@@ -4,7 +4,7 @@ var camera2
 Agar.initSpawn = function(){
 
 	
-     for(i=0;i<749;i++) {
+     for(i=0;i<100;i++) {
      	x=(Math.random()*90);
      	y=(Math.random()*90);
 	     z=(Math.random()*90);
