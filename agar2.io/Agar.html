@@ -63,10 +63,7 @@ sphere.position.z = 5;
 			var light = new THREE.AmbientLight( ); // soft white light
 			scene.add( light );
 
-				particles.setDrawRange( 0, 1000);
-				particles.addAttribute( 'position', new THREE.BufferAttribute( particlePositions, 3 ).setDynamic( true ) );
-
-				pointCloud = new THREE.Points( particles, pMaterial );
+				
 
 				scene.add( pointCloud );
 
