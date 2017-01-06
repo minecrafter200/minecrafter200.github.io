@@ -5,5 +5,5 @@ map.grid.init = function(){
 for(i=0;i<1000000;i++){
   map.grid.points[i] = new THREE.Vector3(0,0,0);
   }
-  consol.log("LOOP FINISHED");
+  console.log("LOOP FINISHED");
 }
