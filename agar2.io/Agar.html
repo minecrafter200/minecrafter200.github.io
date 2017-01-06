@@ -110,15 +110,16 @@ var materialOne = new THREE.MeshBasicMaterial({
 	map : textureOne,
 	side : THREE.BackSide
 });
-textureOne.position.x = -50
-	textureOne.position.y-50
-		textureOne.position.z = 50
+
 
 console.log(materialOne);
 var geometryOne = new THREE.SphereGeometry(200, 32, 32);
 			console.log(geometryOne);
 var meshOne = new THREE.Mesh(geometryOne, materialOne);
 			console.log(meshOne);
+			meshOne.position.x = -50
+	meshOne.position.y-50
+		meshOne.position.z = 50
 
 scene.add(meshOne);
 			
