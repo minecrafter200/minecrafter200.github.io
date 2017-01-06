@@ -110,6 +110,9 @@ var materialOne = new THREE.MeshBasicMaterial({
 	map : textureOne,
 	side : THREE.BackSide
 });
+textureOne.position.x = -50
+	textureOne.position.y-50
+		textureOne.position.z = 50
 
 console.log(materialOne);
 var geometryOne = new THREE.SphereGeometry(200, 32, 32);
@@ -135,19 +138,13 @@ while (position<1000) {
 //Line One
 var numPoints = 100;
 var count = 0
+
 while (count<1000) {
-spline = new THREE.SplineCurve3([
- Space_Time[count+0],
- Space_Time[count+1],
- Space_Time[count+2],
- Space_Time[count+3],
- Space_Time[count+4],
- Space_Time[count+5],
- Space_Time[count+6],
- Space_Time[count+7],
- Space_Time[count+8],
- Space_Time[count+9]
-]);	
+	var list [];
+	for (n<100,n=0,n++) {
+		list[n] = Space_Time[count+n];
+	}
+spline = new THREE.SplineCurve3(list);	
 
 
 
