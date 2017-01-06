@@ -92,9 +92,9 @@ scene.add( sphere );
 
 			camera.position.z = 5;
 			camera.updateProjectionMatrix();
-
+			map.grid.init();
 			var render = function () {
-
+				
 				var delta = clock.getDelta();
 				sphere.rotation.x = camera.rotation.x
 				sphere.rotation.y = camera.rotation.y
