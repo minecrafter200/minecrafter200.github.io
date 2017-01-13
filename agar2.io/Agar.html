@@ -16,6 +16,7 @@
 
 	</head>
 	<body>
+		<div id="settings" style="opacity: 0.5; background-color: grey;"> </div>
 
 		<div id="agarFeild" >
 		<script src="player_s.js"></script>	
@@ -38,6 +39,7 @@ scene.add( light );
 			var renderer = new THREE.WebGLRenderer();
 			renderer.setSize( 1*window.innerWidth, 1*window.innerHeight );
 			document.getElementById("agarFeild").appendChild( renderer.domElement );
+			renderer.antialias = true;
 			//FLY CONTROLS
 			var geometry = new THREE.SphereGeometry( 2.5, 40, 40 ); 
 var material = new THREE.MeshNormalMaterial(); 
