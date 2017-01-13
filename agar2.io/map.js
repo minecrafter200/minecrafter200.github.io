@@ -3,9 +3,9 @@ map.grid = {};
 map.grid.points = new Array();
 map.grid.init = function(){
 map.grid.curvearrays = {};
-  map.grid.curvearrays.1 = new Array();
-  map.grid.curvearrays.2 = new Array();
-  map.grid.curvearrays.3 = new Array();
+  map.grid.curvearrays.a = new Array();
+  map.grid.curvearrays.b = new Array();
+  map.grid.curvearrays.c = new Array();
   map.lines = new THREE.Object3D();
 console.log(curve)
   var curve = new THREE.CatmullRomCurve3( [
