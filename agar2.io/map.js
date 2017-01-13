@@ -2,10 +2,21 @@ var map = {}
 map.grid = {};
 map.grid.points = new Array();
 map.grid.init = function(){
-var curve = new THREE.CatmullRomCurve3([
-  new THREE.Vector3( -10, 0, -10 )
-]);
+map.grid.curvearrays = {};
+  map.grid.curvearrays.1 = new Array();
+  map.grid.curvearrays.2 = new Array();
+  map.grid.curvearrays.3 = new Array();
+  map.lines = new THREE.Object3D();
 console.log(curve)
+  var curve = new THREE.CatmullRomCurve3( [
+    new THREE.Vector3(10,10,10)
+    new Three.vector3(0,0,0)
+    ] );
+  var geometry = new THREE.Geometry();
+  geometry.verticies - curve.getPoints( 50 ):
+  var material = new THREE.LineBasicMaterial( { color : 0x000000 } );
+  var curveObject - new THREE.Line(geometry, material);
+  map.lines.add(curveObject);
 var i = 0;
 for(z=0;z<100;z++){
   for(y=0;y<100;y++){
