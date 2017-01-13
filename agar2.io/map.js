@@ -13,7 +13,7 @@ console.log(curve)
     new THREE.Vector3(0,0,0)
     ] );
   var geometry = new THREE.Geometry();
-  geometry.verticies = curve.getPoints( 2 );
+  geometry.vertices = curve.getPoints( 2 );
   var material = new THREE.LineBasicMaterial( { color : 0xffffff } );
   var curveObject = new THREE.Line(geometry, material);
   console.log(curveObject);
