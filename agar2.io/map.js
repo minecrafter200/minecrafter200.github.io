@@ -14,7 +14,7 @@ console.log(curve)
     ] );
   var geometry = new THREE.Geometry();
   geometry.verticies = curve.getPoints( 2 );
-  var material = new THREE.LineBasicMaterial( { color : 0x000000 } );
+  var material = new THREE.LineBasicMaterial( { color : 0xffffff } );
   var curveObject = new THREE.Line(geometry, material);
   map.lines.add(curveObject);
 var i = 0;
