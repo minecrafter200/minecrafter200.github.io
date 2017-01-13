@@ -9,7 +9,7 @@ map.grid.curvearrays = {};
   map.lines = new THREE.Object3D();
 console.log(curve)
   var curve = new THREE.CatmullRomCurve3( [
-    new THREE.Vector3(10,10,10)
+    new THREE.Vector3(10,10,10),
     new Three.vector3(0,0,0)
     ] );
   var geometry = new THREE.Geometry();
