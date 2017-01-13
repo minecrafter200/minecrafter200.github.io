@@ -2,6 +2,9 @@ var map = {}
 map.grid = {};
 map.grid.points = new Array();
 map.grid.init = function(){
+var curve = new THREE.CatmullRomCurve3([
+  new THREE.Vector3( -10, 0, -10 )
+]);
 var i = 0;
 for(z=0;z<100;z++){
   for(y=0;y<100;y++){
