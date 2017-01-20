@@ -17,7 +17,7 @@ for(z=0;z<100;z++){
     i++
     }
     
-    map.lines.add = new THREE.Line(new THREE.Geometry().verticies = new THREE.CatmullRomCurve3( map.grid.points.slice((y*100),((y*100)+99) ))).getPoints(40),new THREE.LineBasicMaterial( { color : 0xffffff } ));
+    map.lines.add = new THREE.Line(new THREE.Geometry().verticies = new THREE.CatmullRomCurve3( map.grid.points.slice((y*100),((y*100)+99) ))).getPoints(40)),new THREE.LineBasicMaterial( { color : 0xffffff } ));
   }
   
   }
