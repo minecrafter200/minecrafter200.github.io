@@ -7,17 +7,7 @@ map.grid.curvearrays = {};
   map.grid.curvearrays.b = new Array();
   map.grid.curvearrays.c = new Array();
   map.lines = new THREE.Object3D();
-console.log(curve)
-  var curve = new THREE.CatmullRomCurve3( [
-    new THREE.Vector3(10,10,10),
-    new THREE.Vector3(0,0,0)
-    ] );
-  var geometry = new THREE.Geometry();
-  geometry.vertices = curve.getPoints( 2 );
   var material = new THREE.LineBasicMaterial( { color : 0xffffff } );
-  var curveObject = new THREE.Line(geometry, material);
-  console.log(curveObject);
-  map.lines.add(curveObject);
 var i = 0;
 for(z=0;z<100;z++){
   for(y=0;y<100;y++){
