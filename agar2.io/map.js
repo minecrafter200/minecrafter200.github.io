@@ -26,7 +26,7 @@ for(z=0;z<100;z++){
       map.grid.points[i] = new THREE.Vector3((x*10)-500,(y*10)-500,(z*10)-500);
     i++
     }
-    map.lines.add(new THREE.CatmullRomCurve3( map.grid.points.slice((y*100),((y*100)+99) ))));
+    map.lines.add(new THREE.CatmullRomCurve3( map.grid.points.slice((y*100),((y*100)+99) )));
   }
   
   }
