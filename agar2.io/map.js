@@ -16,8 +16,10 @@ for(z=0;z<100;z++){
       map.grid.points[i] = new THREE.Vector3((x*10)-500,(y*10)-500,(z*10)-500);
     i++
     }
-    
-    map.lines.add = new THREE.Line(new THREE.Geometry().verticies = new THREE.CatmullRomCurve3( map.grid.points.slice((y*100),((y*100)+99) ))).getPoints(40)),new THREE.LineBasicMaterial( { color : 0xffffff } ));
+    var temp = new THREE.CatmullRomCurve3( map.grid.points.slice((y*100),((y*100)+99) ))));
+    var tempGeo = new THREE.Geometry();
+    tempGeo.vertices = temp.getPoints(50);
+    map.lines.add = new THREE.Line(tempGeo,new THREE.LineBasicMaterial( { color : 0xffffff } ));
   }
   
   }
