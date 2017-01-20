@@ -32,7 +32,7 @@ var curve = new THREE.CatmullRomCurve3( [
 	new THREE.Vector3( 5, -5, 5 ),
 	new THREE.Vector3( 10, 0, 10 )
 ] );
-
+console.log(map.grid.points);
 var geometry = new THREE.Geometry();
 geometry.vertices = curve.getPoints( 50 );
 
