@@ -17,6 +17,7 @@ var i = 0;
     i++
     }
     var temp = new THREE.CatmullRomCurve3( map.grid.points);
+    var clone1
     
     
     
@@ -24,6 +25,7 @@ var i = 0;
     tempGeo.vertices = temp.getPoints(50);
     var curveObject = new THREE.Line( tempGeo, new THREE.LineBasicMaterial( { color : 0xffffff } ));
     map.lines.add(curveObject);
+    Object.assign(clone1, curveObject);
     console.log(map.lines);
   //}
   //}
