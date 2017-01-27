@@ -9,6 +9,8 @@ map.grid.curvearrays = {};
   map.lines = new THREE.Object3D();
   var material = new THREE.LineBasicMaterial( { color : 0xffffff } );
 var i = 0;
+var slice1 = new Object3D();
+
 //for(z=0;z<100;z++){
   //for(y=0;y<100;y++){
     
@@ -18,15 +20,21 @@ var i = 0;
     }
     var temp = new THREE.CatmullRomCurve3( map.grid.points);
     var clone1 = new Object();
-    
-    
-    
-    var tempGeo = new THREE.Geometry();
+     var tempGeo = new THREE.Geometry();
     tempGeo.vertices = temp.getPoints(50);
     var curveObject = new THREE.Line( tempGeo, new THREE.LineBasicMaterial( { color : 0xffffff } ));
     map.lines.add(curveObject);
-    Object.assign(clone1, curveObject);
+    for(x=0;x<100;x++){
+      var clone1 = new Object();
+      Object.assign(clone1, curveObject);
+      clone1.position.x = clone1.position.x+10;
+      slice1.add(clone1);
+    }
+       
+   
+    
     console.log(map.lines);
+      slice1.add(curveObject)
   //}
   //}
   }
