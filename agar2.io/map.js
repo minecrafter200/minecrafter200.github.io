@@ -26,7 +26,7 @@ var slice1 = new THREE.Object3D();
     map.lines.add(curveObject);
     for(x=0;x<100;x++){
       var temp2 = curveObject.clone();
-      temp2.position.x = clone1.position.x+10;
+      temp2.position.x = temp2.position.x+10;
       slice1.add(temp2);
     }
        
