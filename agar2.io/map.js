@@ -25,10 +25,9 @@ var slice1 = new THREE.Object3D();
     var curveObject = new THREE.Line( tempGeo, new THREE.LineBasicMaterial( { color : 0xffffff } ));
     map.lines.add(curveObject);
     for(x=0;x<100;x++){
-      var clone1 = new Object();
-      Object.assign(clone1, curveObject);
-      clone1.position.x = clone1.position.x+10;
-      slice1.add(clone1);
+      var temp2 = curveObject.clone();
+      temp2.position.x = clone1.position.x+10;
+      slice1.add(temp2);
     }
        
    
