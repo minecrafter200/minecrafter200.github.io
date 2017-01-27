@@ -16,7 +16,7 @@ var i = 0;
       map.grid.points[i] = new THREE.Vector3((x*10)-500,-500,-500);
     i++
     }
-    var temp = new THREE.CatmullRomCurve3( map.grid.points.slice((y*100)+(z*100),((y*100)+(z*100))+99));
+    var temp = new THREE.CatmullRomCurve3( map.grid.points);
     
     
     
