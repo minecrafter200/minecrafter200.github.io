@@ -17,8 +17,10 @@ for(z=0;z<100;z++){
     i++
     }
     var temp = new THREE.CatmullRomCurve3( map.grid.points.slice((y*100)+(z*100),((y*100)+(z*100))+99));
-    console.log(y)
-    console.log(z)
+    
+    
+    console.log("Start", (y*100)+(z*100))
+    console.log("End", (y*100)+(z*100)+99)
     var tempGeo = new THREE.Geometry();
     tempGeo.vertices = temp.getPoints(50);
     var curveObject = new THREE.Line( tempGeo, new THREE.LineBasicMaterial( { color : 0xffffff } ));
