@@ -17,7 +17,7 @@ var i = 0;
     i++
     }
     var temp = new THREE.CatmullRomCurve3( map.grid.points);
-    var clone1
+    var clone1 = new Object();
     
     
     
