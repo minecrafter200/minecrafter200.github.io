@@ -30,7 +30,7 @@ var slice1 = new THREE.Object3D();
       slice1.add(temp2);
     }
        
-   
+   map.lines.add(slice1);
     
     console.log(map.lines);
       slice1.add(curveObject)
