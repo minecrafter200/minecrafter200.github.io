@@ -25,6 +25,7 @@ var slice1 = new THREE.Object3D();
     var curveObject = new THREE.Line( tempGeo, new THREE.LineBasicMaterial( { color : 0xffffff } ));
     map.lines.add(curveObject);
     for(x=0;x<100;x++){
+      console.log(x)
       var temp2 = curveObject.clone();
       temp2.position.x = temp2.position.x+10;
       slice1.add(temp2);
