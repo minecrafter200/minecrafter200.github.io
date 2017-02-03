@@ -27,9 +27,11 @@ var slice1 = new THREE.Object3D();
             var   temp3
     for(x=0;x<100;x++){
       console.log(x)
+      
       var temp2 = curveObject.clone();
-temp3=temp2
+
       temp2.position.x = temp3.position.x+10
+      temp3=temp2
       slice1.add(temp2);
 
     }
