@@ -1,4 +1,4 @@
-wvar map = {}
+var map = {}
 map.grid = {};
 map.grid.points = new Array();
 map.grid.init = function(){
