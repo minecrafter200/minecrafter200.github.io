@@ -24,15 +24,19 @@ var slice1 = new THREE.Object3D();
     tempGeo.vertices = temp.getPoints(50);
     var curveObject = new THREE.Line( tempGeo, new THREE.LineBasicMaterial( { color : 0xffffff } ));
     map.lines.add(curveObject);
-            var   temp3
+
+                  var temp3 = curveObject.clone();
+  var temp2 = curveObject.clone();
     for(x=0;x<100;x++){
       console.log(x)
       
-      var temp2 = curveObject.clone();
+
 
       temp2.position.x = temp3.position.x+10
+      var temp4 = temp2.clone();
+      slice1.add(temp4)
       temp3=temp2
-      slice1.add(temp2);
+
 
     }
        
