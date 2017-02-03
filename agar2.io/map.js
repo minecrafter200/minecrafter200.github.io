@@ -32,7 +32,7 @@ var slice1 = new THREE.Object3D();
       
 
 
-      temp2.position.x = temp3.position.x+10
+      temp2.position.z = temp3.position.z+10
       var temp4 = temp2.clone();
       slice1.add(temp4)
       temp3=temp2
