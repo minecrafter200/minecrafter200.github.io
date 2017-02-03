@@ -1,4 +1,4 @@
-var map = {}
+wvar map = {}
 map.grid = {};
 map.grid.points = new Array();
 map.grid.init = function(){
@@ -33,7 +33,7 @@ var slice1 = new THREE.Object3D();
    map.lines.add(slice1);
     
     console.log(map.lines);
-      slice1.add(curveObject)
+      //slice1.add(curveObject)
   //}
   //}
   }
