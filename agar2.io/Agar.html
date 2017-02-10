@@ -113,6 +113,7 @@ scene.add( sphere );
 			var render = function () {
 				var particleCount = smokeParticles.vertices.length;
 while (particleCount--) {
+var delta = clock.getDelta();
     var particle = smokeParticles.vertices[particleCount];
     particle.y += delta * 50;
      
@@ -123,7 +124,7 @@ while (particleCount--) {
     }
 }
 smokeParticles.__dirtyVertices = true;
-				var delta = clock.getDelta();
+				
 				sphere.rotation.x = camera.rotation.x
 				sphere.rotation.y = camera.rotation.y
 				sphere.rotation.z = camera.rotation.z
