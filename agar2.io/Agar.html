@@ -111,7 +111,18 @@ scene.add( sphere );
 			map.grid.init();
 			scene.add(map.lines)
 			var render = function () {
-				
+				var particleCount = smokeParticles.vertices.length;
+while (particleCount--) {
+    var particle = smokeParticles.vertices[particleCount];
+    particle.y += delta * 50;
+     
+    if (particle.y >= 230) {
+        particle.y = Math.random() * 16;
+        particle.x = Math.random() * 32 - 16;
+        particle.z = Math.random() * 32 - 16;
+    }
+}
+smokeParticles.__dirtyVertices = true;
 				var delta = clock.getDelta();
 				sphere.rotation.x = camera.rotation.x
 				sphere.rotation.y = camera.rotation.y
