@@ -27,8 +27,10 @@
 		<script src="SpawnAgar.js"></script>
 		<script src="map.js"></script>
 		<script>
+			
 			var clock = new THREE.Clock();
 			var scene = new THREE.Scene();
+			scene.fog = new THREE.FogExp2( 0xffffff, 0.015);
 			var camera = new THREE.PerspectiveCamera( 75, (0.8*window.innerWidth)/(0.8*window.innerHeight), 0.1, 922337203 );
 			Agar.initSpawn()
 			var light = new THREE.SpotLight( 0x404040 ); // soft white light
