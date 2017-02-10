@@ -37,7 +37,7 @@
 			    smokeParticles.vertices.push(particle);
 			}
 			var smokeTexture = THREE.ImageUtils.loadTexture('http://minecrafter200.github.io/gas.jpg');
-var smokeMaterial = new THREE.ParticleBasicMaterial({ map: smokeTexture, transparent: true, blending: THREE.AdditiveBlending, size: 50, color: 0x111111 });
+var smokeMaterial = new THREE.ParticleBasicMaterial({ map: smokeTexture, transparent: true, blending: THREE.AdditiveBlending, size: 1, color: 0x111111 });
 			var smoke = new THREE.ParticleSystem(smokeParticles, smokeMaterial);
 smoke.sortParticles = true;
 
