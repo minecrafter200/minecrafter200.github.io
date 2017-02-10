@@ -111,9 +111,10 @@ scene.add( sphere );
 			map.grid.init();
 			scene.add(map.lines)
 			var render = function () {
+				var delta = clock.getDelta();
 				var particleCount = smokeParticles.vertices.length;
 while (particleCount--) {
-var delta = clock.getDelta();
+
     var particle = smokeParticles.vertices[particleCount];
     particle.y += delta * 50;
      
