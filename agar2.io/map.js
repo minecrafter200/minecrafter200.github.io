@@ -16,7 +16,7 @@ var slice1 = new THREE.Object3D();
   //for(y=0;y<100;y++){
     
     for(x=0;x<100;x++){
-      map.grid.points[i] = new THREE.Vector3((x*1000)-500,-500,-500);
+      map.grid.points[i] = new THREE.Vector3((x*100)-500,-500,-500);
     i++
     }
     var temp = new THREE.CatmullRomCurve3( map.grid.points);
@@ -51,7 +51,7 @@ var temp2 = slice1.clone();
       
 
 
-      temp2.position.y = temp3.position.y+1000
+      temp2.position.y = temp3.position.y+100
       var temp4 = temp2.clone();
       loaf.add(temp4)
       temp3=temp2
