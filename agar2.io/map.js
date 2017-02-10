@@ -10,6 +10,7 @@ map.grid.curvearrays = {};
   var material = new THREE.LineBasicMaterial( { color : 0xffffff } );
 var i = 0;
 var slice1 = new THREE.Object3D();
+  var loaf = new THREE.Object3D();
 
 //for(z=0;z<100;z++){
   //for(y=0;y<100;y++){
@@ -44,6 +45,22 @@ var slice1 = new THREE.Object3D();
     
     console.log(map.lines);
       //slice1.add(curveObject)
+var temp2 = slice1.clone();
+    for(x=0;x<100;x++){
+
+      
+
+
+      temp2.position.y = temp3.position.y+10
+      var temp4 = temp2.clone();
+      loaf.add(temp4)
+      temp3=temp2
+
+
+    }
+   map.lines.add(loaf);
+ 
+    
   //}
   //}
   }
