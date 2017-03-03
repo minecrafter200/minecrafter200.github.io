@@ -1,6 +1,6 @@
 var map = {}
 map.grid = {};
-map.grid.points = new Array();
+map.lines;
 map.grid.init = function(){
   var xfragment = "uniform vec3 color;"+
       "uniform float opacity;"+
@@ -57,5 +57,5 @@ map.grid.init = function(){
 
 			object = new THREE.Line( buffergeometry, shaderMaterial );
 			object.rotation.x = 0.2;
-			scene.add( object );
+			map.lines = object;
 }
