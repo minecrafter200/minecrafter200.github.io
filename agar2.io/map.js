@@ -17,20 +17,23 @@ map.grid.init = function(){
             "vec3 newPosition = position + amplitude * displacement;"+
             "vColor = customColor;"+
             "gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 ); }";
-  uniforms = {
-    aplitude: {value:5.0},
-    opacity: {value:0.3},
-    color: {value: new THREE.Color( 0xff0000 )}
-  };
-  var shaderMaterial = new THREE.ShaderMaterial( {
-    
-    uniform: uniforms,
-    vertexShader: xvertext,
-    fragmentShader: xfragment,
-    blending: THREE.AdditiveBlending,
-    depthTest: false,
-    transparent: true
-  });
+			uniforms = {
+
+				amplitude: { value: 5.0 },
+				opacity:   { value: 0.3 },
+				color:     { value: new THREE.Color( 0xff0000 ) }
+
+			};
+			var shaderMaterial = new THREE.ShaderMaterial( {
+
+				uniforms:       uniforms,
+				vertexShader:   xvertext,
+				fragmentShader: xfragment,
+				blending:       THREE.AdditiveBlending,
+				depthTest:      false,
+				transparent:    true
+
+			});
   var geometry = new THREE.SphereGeometry(2,40,40);
  var vertices = geometry.vertices;
   
