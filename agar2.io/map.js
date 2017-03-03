@@ -34,7 +34,7 @@ map.grid.init = function(){
 				transparent:    true
 
 			});
-  var geometry = new THREE.SphereGeometry(2,40,40);
+  var geometry = new THREE.SphereGeometry(20,40,40);
  var vertices = geometry.vertices;
   
   var buffergeometry = new THREE.BufferGeometry();
