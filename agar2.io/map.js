@@ -32,6 +32,30 @@ map.grid.init = function(){
     transparent: true
   });
   var geometry = new THREE.SphereGeometry(2,40,40);
- var vertices = geometry.vertices
+ var vertices = geometry.vertices;
+  
+  var buffergeometry = new THREE.BufferGeometry();
+
+			var position = new THREE.Float32BufferAttribute( vertices.length * 3, 3 ).copyVector3sArray( vertices );
+			buffergeometry.addAttribute( 'position', position );
+
+			var displacement = new THREE.Float32BufferAttribute( vertices.length * 3, 3 );
+			buffergeometry.addAttribute( 'displacement', displacement );
+
+			var customColor = new THREE.Float32BufferAttribute( vertices.length * 3, 3 );
+			buffergeometry.addAttribute( 'customColor', customColor );
+
+			var color = new THREE.Color( 0xffffff );
+
+			for( var i = 0, l = customColor.count; i < l; i ++ ) {
+
+				color.setHSL( i / l, 0.5, 0.5 );
+				color.toArray( customColor.array, i * customColor.itemSize );
+
+			}
+
+			object = new THREE.Line( buffergeometry, shaderMaterial );
+			object.rotation.x = 0.2;
+			map.lines = object;
  
 }
