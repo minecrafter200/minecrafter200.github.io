@@ -1,6 +1,5 @@
 var map = {}
 map.grid = {};
-map.lines;
 map.grid.init = function(){
   var xfragment = "uniform vec3 color;"+
       "uniform float opacity;"+
