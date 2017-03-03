@@ -28,7 +28,7 @@ map.grid.init = function(){
     fragmentShader: xfragment,
     blending: THREE.AdditiveBlending,
     depthTest: false
-    transparent: True;
+    transparent: true;
   });
   var geometry = new THREE.SphereGeometry(2,40,40);
  var vertices = geometry.vertices
