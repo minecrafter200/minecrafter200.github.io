@@ -37,7 +37,7 @@
 			    smokeParticles.vertices.push(particle);
 			}
 			var smokeTexture = THREE.ImageUtils.loadTexture('http://minecrafter200.github.io/Smoke-19.png');
-var smokeMaterial = new THREE.ParticleBasicMaterial({ map: smokeTexture, transparent: true, blending: THREE.AdditiveBlending, size: 0.1, color: 0x111111 });
+var smokeMaterial = new THREE.ParticleBasicMaterial({ map: smokeTexture, transparent: false, blending: THREE.AdditiveBlending, size: 0.1, color: 0x111111 });
 			var smoke = new THREE.ParticleSystem(smokeParticles, smokeMaterial);
 smoke.sortParticles = true;
 
